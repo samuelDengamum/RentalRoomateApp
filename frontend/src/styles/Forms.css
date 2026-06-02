@@ -1,0 +1,147 @@
+.form-wrap {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.form-wrap > p {
+  color: #36506b;
+}
+
+.modern-form {
+  display: grid;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(15, 82, 116, 0.2);
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.modern-form input,
+.modern-form textarea,
+.modern-form select,
+.search-row input {
+  width: 100%;
+  border: 1px solid #c4d4df;
+  border-radius: 10px;
+  padding: 0.68rem 0.8rem;
+  font: inherit;
+  background: #fff;
+}
+
+.modern-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.modern-form button,
+.search-row button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  background: linear-gradient(125deg, #0f5274, #2b7f95);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.helper-text {
+  margin: 0;
+  color: #4d6278;
+  font-size: 0.92rem;
+}
+
+.upload-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.7rem;
+}
+
+.upload-preview-item {
+  border: 1px solid #d0dbe4;
+  border-radius: 12px;
+  padding: 0.45rem;
+  background: #f5f9fc;
+}
+
+.upload-preview-item img {
+  width: 100%;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.45rem;
+}
+
+.upload-preview-item button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.45rem;
+  font-size: 0.88rem;
+}
+
+.upload-preview-actions {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.secondary-action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid #0f5274;
+  color: #0f5274;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 0.9rem;
+  background: #fff;
+}
+
+.danger-action-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  background: #b42318;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.danger-action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.split-2,
+.split-3,
+.split-4 {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.split-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.split-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.split-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .split-3,
+  .split-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .split-2,
+  .split-3,
+  .split-4 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,107 @@
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(7, 20, 30, 0.78);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.lightbox-panel {
+  width: min(980px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: #f4fbff;
+  border: 1px solid rgba(15, 82, 116, 0.28);
+  border-radius: 16px;
+  padding: 0.9rem;
+}
+
+.lightbox-close {
+  border: none;
+  border-radius: 10px;
+  background: #0f5274;
+  color: #fff;
+  padding: 0.45rem 0.75rem;
+  margin-bottom: 0.55rem;
+  cursor: pointer;
+}
+
+.lightbox-main {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lightbox-main img {
+  width: 100%;
+  max-height: 62vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #dfe8ef;
+}
+
+.lightbox-nav {
+  border: none;
+  border-radius: 999px;
+  width: 46px;
+  height: 46px;
+  background: #0f5274;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lightbox-nav:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.lightbox-meta {
+  margin: 0.6rem 0;
+  color: #33556d;
+  font-weight: 600;
+}
+
+.lightbox-thumbs {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.lightbox-thumb {
+  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.lightbox-thumb img {
+  width: 96px;
+  min-width: 96px;
+  height: 66px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.lightbox-thumb.active {
+  border-color: #0f5274;
+}
+
+@media (max-width: 720px) {
+  .lightbox-main {
+    grid-template-columns: 1fr;
+  }
+
+  .lightbox-nav {
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    padding: 0.45rem 0.6rem;
+  }
+}

@@ -1,0 +1,509 @@
+.roommates-wrap {
+  display: grid;
+  gap: 1rem;
+}
+
+.roommates-hero {
+  padding: 1.35rem;
+  border: 1px solid rgba(15, 82, 116, 0.14);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(43, 127, 149, 0.14), transparent 38%),
+    radial-gradient(circle at 86% 70%, rgba(231, 104, 58, 0.13), transparent 44%),
+    rgba(255, 255, 255, 0.88);
+}
+
+.roommates-hero h1 {
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.2px;
+}
+
+.roommates-hero p {
+  color: #34566f;
+  margin: 0;
+}
+
+.roommate-approval-box {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.roommate-approval-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.roommate-approval-pill--pending {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.roommate-approval-pill--approved {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.roommate-approval-pill--rejected {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.roommates-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1rem;
+}
+
+.panel {
+  padding: 1rem;
+  border: 1px solid rgba(15, 82, 116, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.filters-panel.filters-modern {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(43, 127, 149, 0.16), transparent 34%),
+    radial-gradient(circle at 86% 0%, rgba(231, 104, 58, 0.14), transparent 32%),
+    rgba(255, 255, 255, 0.93);
+}
+
+.section-heading--compact {
+  margin-top: 0.35rem;
+}
+
+.roommate-toolbar {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) auto;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.density-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-self: start;
+  padding: 0.28rem;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 93, 123, 0.28);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.density-toggle button {
+  border: none;
+  background: transparent;
+  color: #25536f;
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+.density-toggle button.active {
+  color: #ffffff;
+  background: linear-gradient(130deg, #0f5274, #2b7f95);
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.roommate-list {
+  display: grid;
+  gap: 1rem;
+  max-height: 68vh;
+  overflow: auto;
+  padding-right: 0.2rem;
+  padding-top: 0.25rem;
+}
+
+.roommate-property-card {
+  cursor: default;
+  border: 1px solid rgba(118, 193, 214, 0.32);
+  border-radius: 18px;
+  padding: 0.95rem;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(231, 104, 58, 0.11), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  box-shadow: 0 16px 28px rgba(15, 82, 116, 0.1);
+}
+
+.roommate-list--compact .roommate-property-card {
+  padding: 0.7rem;
+}
+
+.roommate-list--compact .roommate-details-grid {
+  gap: 0.4rem;
+}
+
+.roommate-list--compact .roommate-detail-item {
+  padding: 0.35rem 0.5rem;
+  font-size: 0.84rem;
+}
+
+.roommate-list--compact .description {
+  margin-bottom: 0.6rem;
+}
+
+.roommate-property-card .price {
+  font-size: 1.34rem;
+  color: #0d5a7f;
+  font-weight: 800;
+}
+
+.roommate-identity-line {
+  margin-top: 0.18rem;
+  color: #4a667a;
+  font-size: 0.9rem;
+}
+
+.roommate-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border: 1px solid #dce8ef;
+  border-radius: 14px;
+  background: #f7fbfd;
+}
+
+.roommate-filters input,
+.roommate-filters select {
+  border: 1px solid rgba(21, 90, 120, 0.2);
+  border-radius: 12px;
+  padding: 0.72rem 0.82rem;
+  background: rgba(255, 255, 255, 0.92);
+  color: #113f59;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.roommate-filters input:focus {
+  outline: none;
+  border-color: rgba(24, 125, 158, 0.82);
+  box-shadow: 0 0 0 3px rgba(57, 171, 204, 0.18);
+  transform: translateY(-1px);
+}
+
+.roommate-custom-select {
+  position: relative;
+}
+
+.roommate-custom-select-trigger {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(21, 90, 120, 0.26);
+  border-radius: 12px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.96), rgba(235, 246, 252, 0.9));
+  color: #0f4663;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 8px 14px rgba(11, 57, 81, 0.08);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.roommate-custom-select.open .roommate-custom-select-trigger,
+.roommate-custom-select-trigger:focus-visible {
+  outline: none;
+  border-color: rgba(24, 125, 158, 0.88);
+  box-shadow: 0 0 0 3px rgba(57, 171, 204, 0.2), 0 10px 18px rgba(13, 66, 93, 0.12);
+}
+
+.roommate-custom-select-caret {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.roommate-custom-select.open .roommate-custom-select-caret {
+  transform: rotate(180deg);
+}
+
+.roommate-custom-select-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 16;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.4rem;
+  border-radius: 12px;
+  border: 1px solid rgba(96, 192, 216, 0.4);
+  background: linear-gradient(155deg, rgba(9, 46, 65, 0.97), rgba(14, 71, 95, 0.96));
+  box-shadow: 0 16px 28px rgba(7, 34, 50, 0.34);
+}
+
+.roommate-custom-select-option {
+  border: none;
+  border-radius: 9px;
+  text-align: left;
+  color: #e9f8ff;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.56rem 0.64rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.roommate-custom-select-option:hover,
+.roommate-custom-select-option.active {
+  background: rgba(83, 199, 224, 0.2);
+}
+
+.roommate-filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.roommate-card-actions {
+  margin-top: 0.95rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.roommate-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.roommate-detail-item {
+  display: grid;
+  gap: 0.1rem;
+  background: linear-gradient(160deg, #f6fbff, #eff8fd);
+  border: 1px solid #cfe2ed;
+  border-radius: 10px;
+  padding: 0.42rem 0.55rem;
+  color: #1f4e68;
+  font-size: 0.9rem;
+}
+
+.roommate-detail-item--full {
+  grid-column: span 2;
+}
+
+.detail-label {
+  color: #5c7990;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+}
+
+.roommate-count {
+  font-size: 0.9rem;
+  padding: 0.34rem 0.55rem;
+  border-radius: 999px;
+  background: #ecf6fb;
+  color: #235d7a;
+  border: 1px solid #c6ddeb;
+}
+
+.roommate-empty-state {
+  padding: 1rem;
+  border: 1px dashed #bfd1de;
+  border-radius: 14px;
+  background: #f5fbff;
+}
+
+.roommate-empty-state h3 {
+  margin: 0;
+  color: #1e4f69;
+}
+
+.roommate-empty-state p {
+  margin: 0.35rem 0 0;
+  color: #42657e;
+}
+
+.roommate-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.66rem 0.95rem;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.roommate-btn:hover {
+  transform: translateY(-1px);
+}
+
+.search-btn,
+.save-profile-btn,
+.message-btn,
+.profile-shortcut-btn {
+  color: #fff;
+  background: linear-gradient(130deg, #0f5274, #2b7f95);
+  box-shadow: 0 8px 16px rgba(15, 82, 116, 0.2);
+}
+
+.reset-btn {
+  color: #22536d;
+  background: #fff;
+  border: 1px solid #9fc2d6;
+}
+
+.message-btn {
+  width: auto;
+  padding: 0.46rem 0.78rem;
+  font-size: 0.84rem;
+  border-radius: 999px;
+}
+
+.roommate-profile-panel {
+  padding: 1.05rem;
+}
+
+.roommate-profile-form {
+  gap: 0.9rem;
+}
+
+.image-manager {
+  display: grid;
+  gap: 0.6rem;
+  border: 1px dashed #bfd1de;
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: linear-gradient(180deg, #f7fbfd 0%, #f2f8fc 100%);
+}
+
+.image-manager h4 {
+  margin: 0.15rem 0;
+  font-size: 0.95rem;
+  color: #20475f;
+}
+
+.image-manager-list {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: 60px 1fr auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d8e4eb;
+  border-radius: 10px;
+  padding: 0.4rem;
+}
+
+.image-row img {
+  width: 60px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.file-name {
+  font-size: 0.86rem;
+  color: #31556d;
+  word-break: break-word;
+}
+
+.mini-danger {
+  border: none;
+  border-radius: 8px;
+  background: #de5a34;
+  color: #fff;
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.mini-danger:hover {
+  opacity: 0.92;
+}
+
+.profiles-panel .listing-info {
+  gap: 0.3rem;
+}
+
+.profiles-panel .description {
+  color: #304d63;
+}
+
+.roommate-description {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(243, 249, 253, 0.9);
+  border: 1px solid rgba(198, 221, 234, 0.72);
+}
+
+@media (max-width: 640px) {
+  .roommate-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roommate-detail-item--full {
+    grid-column: auto;
+  }
+
+  .image-row {
+    grid-template-columns: 1fr;
+  }
+
+  .image-row img {
+    width: 100%;
+    height: 130px;
+  }
+
+  .roommate-btn,
+  .roommate-filter-actions .roommate-btn {
+    width: 100%;
+  }
+
+  .roommate-card-actions .message-btn {
+    width: auto;
+  }
+
+  .filters-meta {
+    text-align: left;
+  }
+
+  .roommate-toolbar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .roommates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roommate-filters {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .roommate-filters {
+    grid-template-columns: 1fr;
+  }
+}
